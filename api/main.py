@@ -41,9 +41,11 @@ async def root(request: Request):
     ]
 
     now_gmt = datetime.now(pytz.timezone('Africa/Accra'))
+    print(now_gmt.hour)
+    print(now_gmt.minute)
 
     if now_gmt.hour == 0 and now_gmt.minute < 30:
-        return(timezones[4]['city'] + " " + timezones[4]['country'])
+        return(timezones[3]['city'] + " " + timezones[3]['country'])
     elif now_gmt.hour == 1 and now_gmt.minute < 30:
         return(timezones[3]['city'] + " " + timezones[3]['country'])
     elif now_gmt.hour == 2 and now_gmt.minute < 30:
@@ -57,7 +59,7 @@ async def root(request: Request):
     elif now_gmt.hour == 6 and now_gmt.minute < 30:
         return(timezones[26]['city'] + " " + timezones[26]['country'])
     elif now_gmt.hour == 7 and now_gmt.minute < 30:
-        return(timezones[25]['city'] + " " + timezones[25]['country']) # Tokyo
+        return(timezones[25]['city'] + " " + timezones[25]['country']) 
     elif now_gmt.hour == 8 and now_gmt.minute < 30:
         return(timezones[24]['city'] + " " + timezones[24]['country']) 
     elif now_gmt.hour == 9 and now_gmt.minute < 30:

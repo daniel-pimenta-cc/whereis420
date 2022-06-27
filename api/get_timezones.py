@@ -34,7 +34,6 @@ timezones = [
 ]
 
 now_gmt = datetime.now(pytz.timezone('Africa/Accra'))
-print(timezones[16])
 
 if now_gmt.hour == 0 and now_gmt.minute < 30:
    print(timezones[4]['city'] + " " + timezones[4]['country'])
