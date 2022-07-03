@@ -14,6 +14,10 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 
 @app.get("/")
 async def root(request: Request):
+    
+    #get timezone of the request
+    client_ip = pytz.timezone(request.headers.get("Timezone", "UTC"))
+    client_host = request.client.host
 
     timezones = [
         {'city': 'Pago Pago', 'country': 'American Samoa','timezone': 'Pacific/Pago_Pago', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_American_Samoa_-_Circle-256.png'},
@@ -47,6 +51,8 @@ async def root(request: Request):
         {'city': 'Auckland', 'country': 'New Zealand','timezone': 'Pacific/Auckland', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_New_Zealand_-_Circle-256.png'},
     ]
 
+    print(client_host)
+    
     for i in timezones:
         local_time = datetime.now(pytz.timezone(i['timezone']))
         four_20_pm = local_time.replace(hour=16, minute=20, second=0, microsecond=0)
@@ -66,5 +72,4 @@ async def root(request: Request):
             
 
         
-
-
+#get the time in the 
