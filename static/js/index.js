@@ -10,6 +10,9 @@ window.onload = () => {
     }, 1800);
     setTimeout(()=>{
         document.getElementById('logo-char3').classList.add('text-[#bc0824]');
+        setTimeout(() => {
+            document.getElementById('wm_on').classList.remove('opacity-0')
+        }, 500)
         setInterval(()=> {
             formation = colorsChange(formation)
         }, 1000)

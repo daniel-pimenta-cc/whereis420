@@ -10,6 +10,9 @@
     font-family: "Bitcell";
     src: url(../fonts/bitcell.ttf) format("truetype");
 }
-#world_map {
-    background-image: url(../images/world_map.png);
+#wm_off {
+    background-image: url(../images/wm_off.png);
+}
+#wm_on {
+    background-image: url(../images/wm_on.png);
 }
