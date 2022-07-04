@@ -4,7 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <!-- tailwind's cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind config
+    https://tailwindcss.com/docs/configuration
+    -->
     <script>
         tailwind.config = {
           theme: {
@@ -18,7 +22,13 @@
       </script>
     <link rel="stylesheet" href="static/css/style.css">
 </head>
-<body>
-    djhjfashdsja
+<body id="body_screen" class="flex font-pix items-center justify-center bg-black m-0 w-screen h-screen text-green-600 subpixel-antialiased text-[36px]">
+    <div id='world_map' class="bg-contain bg-no-repeat bg-center"></div>
+    <h1 class="text-3xl absolute">Loading</h1>
+    <script>
+      document.getElementById('world_map').addEventListener('click', (e) => {
+        console.log(e.clientX, e.clientY);
+      })
+    </script>
 </body>
 </html>

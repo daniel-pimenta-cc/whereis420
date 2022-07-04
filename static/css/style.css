@@ -1,14 +1,8 @@
 @font-face {
     font-family: "Pix";
-    src: url(../fonts/PixAntiqua.ttf) format("truetype");
+    src: url(../fonts/pix_antiqua.ttf) format("truetype");
 }
 
-html, body {
-    width: 100vw;
-    height: 100vh;
-    background-color: #060606;
-    font-family: 'Pix', monospace;   
-    font-size: 1.5em;
-    color: #009d00;
-    margin: 0;
+#world_map {
+    background-image: url(../images/world_map.png)
 }
