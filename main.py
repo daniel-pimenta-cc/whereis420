@@ -20,35 +20,35 @@ async def root(request: Request):
     client_host = request.client.host
 
     timezones = [
-        {'city': 'Pago Pago', 'country': 'American Samoa','timezone': 'Pacific/Pago_Pago', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_American_Samoa_-_Circle-256.png'},
-        {'city': 'Honolulu', 'country': 'USA','timezone': 'Pacific/Honolulu', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_the_United_States_-_Circle-256.png'},
-        {'city': 'Rikitea', 'country': 'French Polynesia','timezone': 'Pacific/Gambier', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_French_Polynesia_-_Circle-256.png'},
-        {'city': 'Anchorage', 'country': 'USA','timezone': 'America/Anchorage', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_the_United_States_-_Circle-256.png'},
-        {'city': 'Los Angeles', 'country': 'USA','timezone': 'America/Los_Angeles', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_the_United_States_-_Circle-256.png'},
-        {'city': 'San José', 'country': 'USA','timezone': 'America/Costa_Rica', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_the_United_States_-_Circle-256.png'},
-        {'city': 'Mexico City', 'country': 'Mexico','timezone': 'America/Mexico_City', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Mexico_-_Circle-256.png'},
-        {'city': 'New York', 'country': 'USA','timezone': 'America/New_York', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_the_United_States_-_Circle-256.png'},
-        {'city': 'São Paulo', 'country': 'Brazil','timezone': 'America/Sao_Paulo', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Brazil_-_Circle-256.png'},
-        {'city': 'St John\'s', 'country': 'Canada','timezone': 'America/St_Johns', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Canada_-_Circle-256.png'},
-        {'city': 'Fernando de Noronha', 'country': 'Brazil','timezone': 'America/Noronha', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Brazil_-_Circle-256.png'},
-        {'city': 'Praia', 'country': 'Cape Verde','timezone': 'Atlantic/Cape_Verde', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Cape_Verde_-_Circle-256.png'},
-        {'city': 'Accra', 'country': 'Ghana','timezone': 'Africa/Accra', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Ghana_-_Circle-256.png'},
-        {'city': 'London', 'country': 'UK','timezone': 'Europe/London', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_the_United_Kingdom_-_Circle-256.png'},
-        {'city': 'Cairo', 'country': 'Egypt','timezone': 'Africa/Cairo', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Egypt_-_Circle-256.png'},
-        {'city': 'Moscow', 'country': 'Russia','timezone': 'Europe/Moscow', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Russia_-_Circle-256.png'},
-        {'city': 'Baku', 'country': 'Azerbaijan','timezone': 'Asia/Baku', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Azerbaijan_-_Circle-256.png'},
-        {'city': 'Tehran', 'country': 'Iran','timezone': 'Asia/Tehran', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Iran_-_Circle-256.png'},
-        {'city': 'Karachi', 'country': 'Pakistan','timezone': 'Asia/Karachi', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Pakistan_-_Circle-256.png'},
-        {'city': 'Mumbai', 'country': 'India','timezone': 'Asia/Kolkata', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_India_-_Circle-256.png'},
-        {'city': 'Kathmandu', 'country': 'Nepal','timezone': 'Asia/Kathmandu', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Nepal_-_Circle-256.png'},
-        {'city': 'Daka', 'country': 'Bangladesh','timezone': 'Asia/Dhaka', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Bangladesh_-_Circle-256.png'},
-        {'city': 'Yangon', 'country': 'Myanmar','timezone': 'Asia/Yangon', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Myanmar_-_Circle-256.png'},
-        {'city': 'Jakarta', 'country': 'Indonesia','timezone': 'Asia/Jakarta', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Indonesia_-_Circle-256.png'},
-        {'city': 'Shanghai', 'country': 'China','timezone': 'Asia/Shanghai', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_China_-_Circle-256.png'},
-        {'city': 'Tokyo', 'country': 'Japan','timezone': 'Asia/Tokyo', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Japan_-_Circle-256.png'},
-        {'city': 'Brisbane', 'country': 'Australia','timezone': 'Australia/Brisbane', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Australia_-_Circle-256.png'},
-        {'city': 'Port Vila', 'country': 'Vanuatu','timezone': 'Pacific/Efate', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Vanuatu_-_Circle-256.png'},
-        {'city': 'Auckland', 'country': 'New Zealand','timezone': 'Pacific/Auckland', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_New_Zealand_-_Circle-256.png'},
+        {'city': 'Pago Pago','population':12576, 'country': 'American Samoa','timezone': 'Pacific/Pago_Pago', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_American_Samoa_-_Circle-256.png'},
+        {'city': 'Honolulu','population':820987, 'country': 'USA','timezone': 'Pacific/Honolulu', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_the_United_States_-_Circle-256.png'},
+        {'city': 'Rikitea','population':1200, 'country': 'French Polynesia','timezone': 'Pacific/Gambier', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_French_Polynesia_-_Circle-256.png'},
+        {'city': 'Anchorage','population': 247949, 'country': 'USA','timezone': 'America/Anchorage', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_the_United_States_-_Circle-256.png'},
+        {'city': 'Los Angeles',"population": 12750807, 'country': 'USA','timezone': 'America/Los_Angeles', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_the_United_States_-_Circle-256.png'},
+        {'city': 'San José',"population": 1798103, 'country': 'USA','timezone': 'America/Costa_Rica', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_the_United_States_-_Circle-256.png'},
+        {'city': 'Mexico City',"population": 20996000, 'country': 'Mexico','timezone': 'America/Mexico_City', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Mexico_-_Circle-256.png'},
+        {'city': 'New York',"population": 18713220, 'country': 'USA','timezone': 'America/New_York', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_the_United_States_-_Circle-256.png'},
+        {'city': 'São Paulo',"population": 22046000, 'country': 'Brazil','timezone': 'America/Sao_Paulo', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Brazil_-_Circle-256.png'},
+        {'city': 'St John\'s',"population": 111914, 'country': 'Canada','timezone': 'America/St_Johns', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Canada_-_Circle-256.png'},
+        {'city': 'Fernando de Noronha',"population": 3101, 'country': 'Brazil','timezone': 'America/Noronha', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Brazil_-_Circle-256.png'},
+        {'city': 'Praia',"population": 127832, 'country': 'Cape Verde','timezone': 'Atlantic/Cape_Verde', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Cape_Verde_-_Circle-256.png'},
+        {'city': 'Accra',"population": 2291352, 'country': 'Ghana','timezone': 'Africa/Accra', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Ghana_-_Circle-256.png'},
+        {'city': 'London',"population": 10979000, 'country': 'UK','timezone': 'Europe/London', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_the_United_Kingdom_-_Circle-256.png'},
+        {'city': 'Cairo',"population": 19372000, 'country': 'Egypt','timezone': 'Africa/Cairo', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Egypt_-_Circle-256.png'},
+        {'city': 'Moscow',"population": 17125000, 'country': 'Russia','timezone': 'Europe/Moscow', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Russia_-_Circle-256.png'},
+        {'city': 'Baku',"population": 2181800, 'country': 'Azerbaijan','timezone': 'Asia/Baku', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Azerbaijan_-_Circle-256.png'},
+        {'city': 'Tehran',"population": 13633000, 'country': 'Iran','timezone': 'Asia/Tehran', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Iran_-_Circle-256.png'},
+        {'city': 'Karachi',"population": 14835000, 'country': 'Pakistan','timezone': 'Asia/Karachi', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Pakistan_-_Circle-256.png'},
+        {'city': 'Mumbai',"population": 23355000, 'country': 'India','timezone': 'Asia/Kolkata', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_India_-_Circle-256.png'},
+        {'city': 'Kathmandu',"population": 975453, 'country': 'Nepal','timezone': 'Asia/Kathmandu', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Nepal_-_Circle-256.png'},
+        {'city': 'Daka',"population": 1146053, 'country': 'Bangladesh','timezone': 'Asia/Dhaka', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Bangladesh_-_Circle-256.png'},
+        {'city': 'Yangon',"population": 5514000, 'country': 'Myanmar','timezone': 'Asia/Yangon', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Myanmar_-_Circle-256.png'},
+        {'city': 'Jakarta',"population": 34540000, 'country': 'Indonesia','timezone': 'Asia/Jakarta', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Indonesia_-_Circle-256.png'},
+        {'city': 'Shanghai',"population": 22120000, 'country': 'China','timezone': 'Asia/Shanghai', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_China_-_Circle-256.png'},
+        {'city': 'Tokyo',"population": 37977000, 'country': 'Japan','timezone': 'Asia/Tokyo', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Japan_-_Circle-256.png'},
+        {'city': 'Brisbane', "population": 2514184, 'country': 'Australia','timezone': 'Australia/Brisbane', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Australia_-_Circle-256.png'},
+        {'city': 'Port Vila', "population": 51437, 'country': 'Vanuatu','timezone': 'Pacific/Efate', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_Vanuatu_-_Circle-256.png'},
+        {'city': 'Auckland',"population": 1467800,  'country': 'New Zealand','timezone': 'Pacific/Auckland', 'flag':'https://cdn4.iconfinder.com/data/icons/world-flags-circular/1000/Flag_of_New_Zealand_-_Circle-256.png'},
     ]
 
     print(client_host)
@@ -60,7 +60,7 @@ async def root(request: Request):
         three_30_pm =  local_time.replace(hour=15, minute=30, second=0, microsecond=0)
         
         if local_time > four_20_pm and local_time < four_30_pm:
-            return templates.TemplateResponse("index.html", {"request": request, 'text': f'Is 4:20 in {i["city"]}, {i["country"]}', 'flag': i['flag']})
+            return templates.TemplateResponse("index.html", {"request": request, 'text': f'Is 4:{local_time.minute} in {i["city"]}, {i["country"]}', 'flag': i['flag']})
             #return(f'Is 4:{local_time.minute} in {i["city"]}, {i["country"]}')
         elif local_time < four_20_pm and local_time > three_30_pm:
             if local_time.hour == 15:
@@ -72,4 +72,3 @@ async def root(request: Request):
             
 
         
-#get the time in the 
