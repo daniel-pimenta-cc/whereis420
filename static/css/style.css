@@ -2,7 +2,14 @@
     font-family: "Pix";
     src: url(../fonts/pix_antiqua.ttf) format("truetype");
 }
-
+@font-face {
+    font-family: "Daydream";
+    src: url(../fonts/daydream.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Bitcell";
+    src: url(../fonts/bitcell.ttf) format("truetype");
+}
 #world_map {
-    background-image: url(../images/world_map.png)
+    background-image: url(../images/world_map.png);
 }

@@ -1,34 +1,51 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <!-- tailwind's cdn -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- tailwind config
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- tailwind's cdn -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- tailwind config
     https://tailwindcss.com/docs/configuration
     -->
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              fontFamily: {
-                'pix': ['Pix', 'sans-serif']
-              }
-            }
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'pix': ['Pix', 'monospace'],
+            'daydream': ['Daydream', 'serif'],
+            'bitcell': ['Bitcell', 'sans-serif']
           }
         }
-      </script>
-    <link rel="stylesheet" href="static/css/style.css">
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
-<body id="body_screen" class="flex font-pix items-center justify-center bg-black m-0 w-screen h-screen text-green-600 subpixel-antialiased text-[36px]">
-    <div id='world_map' class="bg-contain bg-no-repeat bg-center"></div>
-    <h1 class="text-3xl absolute">Loading</h1>
-    <script>
-      document.getElementById('world_map').addEventListener('click', (e) => {
-        console.log(e.clientX, e.clientY);
-      })
-    </script>
+
+<body id="body_screen"
+  class="flex font-bitcell items-center justify-center bg-black m-0 w-screen h-screen text-green-600 subpixel-antialiased text-[36px] overflow-hidden">
+  <div id="logo_div" class="flex flex-col items-center justify-center text-center p-8 absolute bg-black/90 border-2 border-green-600 hidden">
+    <div id="world_map" class=""></div>
+    <div class="flex flex-col items-center justify-center -mb-6">
+      <p class="text-[36px] font-pix -mb-16">Where is</p>
+      <p class="text-[120px]">
+        <span id="logo-char1">4</span><span id="logo-char2">:2</span><span id="logo-char3">0</span>
+      </p>
+    </div>
+    <p class="leading-6 ">
+      <span class="font-pix text-[16px]">
+        Created by:
+      </span><br>
+      <span class="text-[36px]">DANIEL PIMENTA</span><br>
+      <span class="text-[36px]">RUGGERY IURY</span>
+    </p>
+  </div>
+  <script src="static/js/index.js"></script>
 </body>
+
 </html>
