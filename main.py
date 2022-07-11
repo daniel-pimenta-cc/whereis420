@@ -53,21 +53,21 @@ async def root(request: Request):
 
     print(client_host)
     
-    for i in timezones:
-        local_time = datetime.now(pytz.timezone(i['timezone']))
+    for i in range(len(timezones)):
+        local_time = datetime.now(pytz.timezone(timezones[i]['timezone']))
         four_20_pm = local_time.replace(hour=16, minute=20, second=0, microsecond=0)
         four_30_pm = local_time.replace(hour=16, minute=30, second=0, microsecond=0)
         three_30_pm =  local_time.replace(hour=15, minute=30, second=0, microsecond=0)
         
         if local_time > four_20_pm and local_time < four_30_pm:
-            return templates.TemplateResponse("index.html", {"request": request, 'text': f'Is 4:{local_time.minute} in {i["city"]}, {i["country"]}', 'flag': i['flag']})
+            return templates.TemplateResponse("index.html", {"request": request, 'text': f'Is 4:{local_time.minute} in {timezones[i]["city"]}, {timezones[i]["country"]}', 'index': str(i)})
             #return(f'Is 4:{local_time.minute} in {i["city"]}, {i["country"]}')
         elif local_time < four_20_pm and local_time > three_30_pm:
             if local_time.hour == 15:
                 minutes_to_420 = (60 - local_time.minute) + 20
             else:
                 minutes_to_420 = 20 - local_time.minute
-            return templates.TemplateResponse("index.html", {"request": request, 'text': f'It will be 4:20 in {i["city"]}, {i["country"]} in {minutes_to_420} minutes', 'flag': i['flag']})
+            return templates.TemplateResponse("index.html", {"request": request, 'text': f'It will be 4:20 in {timezones[i]["city"]}, {timezones[i]["country"]} in {minutes_to_420} minutes', 'index': str(i)})
             #return(f'It will be 4:20 in {i["city"]}, {i["country"]} in {minutes_to_420} minutes')
             
 

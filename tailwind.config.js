@@ -1,19 +1,36 @@
 module.exports = {
   content: [
-    './public/index.html',
-    './src/**/*.{html,js,jsx,ts,tsx}'
+    './templates/index.html',
+    './static/js/*.{js, ts}'
   ],
   theme: {
+    fontSize: {
+      pix_s1: '12px',
+      pix_s2: '24px',
+      pix_s3: '36px',
+      pix_s4: '48px',
+      pix_s5: '60px',
+      pix_s6: '72px',
+      pix_s7: '84px',
+      pix_s8: '96px',
+      pix_s9: '108px',
+      pix_s10: '120px',
+      bitcell_s1: '16px',
+      bitcell_s2: '32px',
+      bitcell_s3: '48px',
+      bitcell_s4: '64px',
+      bitcell_s5: '80px',
+      bitcell_s6: '96px',
+      bitcell_s7: '112px',
+      bitcell_s8: '128px'
+    },
     extend: {
       fontFamily: {
-        text: ['Text', 'sans-serif'],
-        title: ['Audiowide', 'sans-serif']
-      },
-      animation: {
-        'ping-logo': 'ping 3s cubic-bezier(0, 0, 0.2, 1) 1',
-        'logoBG': 'logoBG 5s linear infinite'
+        'pix': ['Pix Antiqua', 'monospace'],
+        'bitcell': ['Bitcell', 'monospace'],
+        'modern-dos': ['Modern DOS', 'monospace']
       }
-    },
+    }
   },
   plugins: []
 }

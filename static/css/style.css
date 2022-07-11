@@ -1,18 +1,26 @@
 @font-face {
-    font-family: "Pix";
-    src: url(../fonts/pix_antiqua.ttf) format("truetype");
-}
-@font-face {
-    font-family: "Daydream";
-    src: url(../fonts/daydream.ttf) format("truetype");
+    font-family: "Pix Antiqua";
+    src: url(../fonts/pix_antiqua.woff2) format('woff2');
+    /* bitmap 12px */
 }
 @font-face {
     font-family: "Bitcell";
-    src: url(../fonts/bitcell.ttf) format("truetype");
+    src: url(../fonts/bitcell.woff2) format('woff2');
+    /* bitmap 16px */
+}
+@font-face {
+    font-family: "Modern DOS";
+    src: url(../fonts/modern_dos.woff2) format('woff2');
+    /* bitmap 16px */
 }
 #wm_off {
     background-image: url(../images/wm_off.png);
 }
 #wm_on {
     background-image: url(../images/wm_on.png);
+}
+#map_bg {
+    background-image: url(../images/world-green.webp);
+    background-repeat: no-repeat;
+    background-size: 200%;
 }

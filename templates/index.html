@@ -1,18 +1,39 @@
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Where is 4:20</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
+        fontSize: {
+          pix_s1: '12px',
+          pix_s2: '24px',
+          pix_s3: '36px',
+          pix_s4: '48px',
+          pix_s5: '60px',
+          pix_s6: '72px',
+          pix_s7: '84px',
+          pix_s8: '96px',
+          pix_s9: '108px',
+          pix_s10: '120px',
+          bitcell_s1: '16px',
+          bitcell_s2: '32px',
+          bitcell_s3: '48px',
+          bitcell_s4: '64px',
+          bitcell_s5: '80px',
+          bitcell_s6: '96px',
+          bitcell_s7: '112px',
+          bitcell_s8: '128px'
+        },
         extend: {
           fontFamily: {
-            'pix': ['Pix', 'monospace'],
-            'daydream': ['Daydream', 'serif'],
-            'bitcell': ['Bitcell', 'sans-serif']
+            'pix': ['Pix Antiqua', 'monospace'],
+            'bitcell': ['Bitcell', 'monospace'],
+            'modern-dos': ['Modern DOS', 'monospace']
           }
         }
       }
@@ -21,22 +42,46 @@
   <link rel="stylesheet" href="static/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
-<body id="body_screen" class="flex font-bitcell items-center justify-center bg-black m-0 w-screen h-screen text-green-600 subpixel-antialiased text-[36px] overflow-hidden">
-  <div id="wm_on" class="w-screen h-screen bg-contain bg-center bg-no-repeat absolute duration-500 opacity-0"></div>
-  <div id="wm_off" class="w-screen h-screen bg-contain bg-center bg-no-repeat"></div>
-  <div id="logo_div" class="flex flex-col items-center justify-center text-center p-8 absolute bg-black/90 border-2 border-green-600 hidden">
-    <div class="flex flex-col items-center justify-center -mb-6">
-      <p class="text-[36px] font-pix -mb-16">Where is</p>
-      <p class="text-[120px]">
-        <span id="logo-char1">4</span><span id="logo-char2">:2</span><span id="logo-char3">0</span>
-      </p>
+
+<body id="body_screen"
+  class="flex font-bitcell items-center justify-center bg-black m-0 w-screen h-screen text-green-600 subpixel-antialiased text-[36px] overflow-hidden">
+
+
+  <!-- INTRO SCREEN -->
+  <span id="response_get" class="hidden">{{index}}</span>
+  <div id="intro_screen" class="flex items-center justify-center w-screen h-screen duration-[3s] relative">
+    <div>
+      <div id="wm_on" class="w-screen h-screen bg-contain bg-center bg-no-repeat absolute duration-500 opacity-0"></div>
+      <div id="wm_off" class="w-screen h-screen bg-contain bg-center bg-no-repeat"></div>
     </div>
-    <p class="leading-6 ">
-      <span class="font-pix text-[16px]">Created by:</span><br>
-      <span class="text-[36px]">DANIEL PIMENTA</span><br>
-      <span class="text-[36px]">RUGGERY IURY</span>
-    </p>
+    <div id="logo_div"
+      class="flex flex-col items-center justify-center text-center p-8 absolute bg-black/90 border-2 border-green-600 hidden">
+      <div class="font-pix flex flex-col items-center justify-center -mb-6">
+        <p class="text-pix_s3 -mb-10">Where is</p>
+        <p class="font-modern-dos text-bitcell_s6 tracking-tight">
+          <span id="logo-char1">4</span><span id="logo-colon" class="-tracking-widest -ml-3">:</span><span id="logo-char2">2</span><span id="logo-char3">0</span>
+        </p>
+      </div>
+      <p class="leading-6">
+        <span class="font-pix text-bitcell_s1">Created by:</span><br>
+        <span class="text-bitcell_s2">DANIEL PIMENTA</span><br>
+        <span class="text-bitcell_s2">RUGGERY IURY</span>
+      </p>
+      <p id="logo_text" class="font-pix mt-6 text-bitcell_s1 duration-1000 opacity-0 -mt-[16px]">PRESS ENTER TO
+        CONTINUE<br>{{text}}</p>
+    </div>
+  </div>
+
+
+
+  <!-- MAP SCREEN -->
+  <div id="map_screen" class="flex flex-col items-center justify-center w-screen h-screen relative hidden p-4">
+    <div id="map_bg" class="flex flex-col items-center justify-center w-full h-full">
+      <div class=" border-4 border-green-600 w-full h-[80%] mb-4"></div>
+      <div class=" border-4 border-green-600 w-full h-[20%] bg-[#000E]"></div>
+    </div>
   </div>
   <script src="static/js/index.js"></script>
 </body>
+
 </html>
