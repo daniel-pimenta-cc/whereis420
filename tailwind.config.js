@@ -1,7 +1,8 @@
 module.exports = {
   content: [
     './templates/index.html',
-    './static/js/*.{js, ts}'
+    './static/js/*.{js, ts}',
+    './static/css/*.{css}'
   ],
   theme: {
     fontSize: {

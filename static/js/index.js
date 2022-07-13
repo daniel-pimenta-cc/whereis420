@@ -39,43 +39,38 @@ window.onload = () => {
             html_element?.classList.add('opacity-0');
         }
     }
-    function startTime() {
-        const user_date = new Date();
-        let h = user_date.getHours();
-        let m = user_date.getMinutes();
-        h = checkTime(h);
-        m = checkTime(m);
-        let span_h = document.getElementById('__user_time_hour');
-        if (span_h != null) {
-            span_h.innerText = h;
-        }
-        let span_m = document.getElementById('__user_time_mins');
-        if (span_m != null) {
-            span_m.innerText = m;
-        }
+    function arrowMove() {
+        let arrow_div = document.getElementById('arrow_img');
+        arrow_div.classList.contains('mb-8') ? arrow_div.classList.remove('mb-8') : arrow_div.classList.add('mb-8');
         setTimeout(() => {
-            startTime();
-        }, 1000);
+            arrowMove();
+        }, 500);
     }
-    function checkTime(i) {
-        if (i < 10) {
-            i = "0" + i;
-        }
-        ;
-        return i;
-    }
-    function initMapScreen() {
+    function initMapScreen(cheat = true) {
         document.getElementById('logo_div')?.classList.add('animate__fadeOut');
         document.getElementById('wm_on')?.classList.add('opacity-0');
         document.getElementById('logo_div')?.addEventListener('animationend', () => {
+            if (cheat) { }
+            else {
+                clearInterval(6);
+                clearInterval(9);
+                clearInterval(10);
+            }
             document.getElementById('intro_screen')?.classList.add('hidden');
             document.getElementById('map_screen')?.classList.remove('hidden');
-            startTime();
+            arrowMove();
+            let city = JSON.parse(document.getElementById('response_get')?.innerText);
+            let text_div = document.getElementById('text_city');
+            let desc_div = document.getElementById('text_desc');
+            let text_text = city.city + ", " + city.country;
+            text_div.innerText = text_text.toUpperCase();
+            desc_div.innerText = city.desc;
+            document.getElementById('info_div')?.classList.remove('opacity-0');
         });
     }
     document.addEventListener('keydown', (ev) => {
         if (ev.key == "Backspace") {
-            initMapScreen();
+            initMapScreen(true);
         }
     });
     let formation = 0;
@@ -93,11 +88,11 @@ window.onload = () => {
             document.getElementById('wm_on')?.classList.remove('opacity-0');
         }, 500);
         setTimeout(() => {
-            setInterval(() => {
+            const logo_colon = setInterval(() => {
                 flashText(document.getElementById('logo-colon'));
             }, 500);
         }, 1000);
-        setInterval(() => {
+        const color_change = setInterval(() => {
             formation = colorsChange(formation);
         }, 1000);
         setTimeout(() => {
@@ -105,14 +100,14 @@ window.onload = () => {
         }, 3000);
         setTimeout(() => {
             document.getElementById('logo_text')?.classList.remove('duration-1000');
-            setInterval(() => {
+            const logo_text_flash = setInterval(() => {
                 flashText(document.getElementById('logo_text'));
-                document.addEventListener('keydown', (e) => {
-                    if (e.key == 'Enter') {
-                        initMapScreen();
-                    }
-                });
             }, 500);
+            document.addEventListener('keydown', (e) => {
+                if (e.key == 'Enter') {
+                    initMapScreen();
+                }
+            });
         }, 4000);
     }, 2000);
 };

@@ -74,14 +74,27 @@
             "year": 2020
         },
         "subdesc": [
-            "Los Angeles is known for its Mediterranean climate, ethnic and cultural diversity, Hollywood film industry, and sprawling metropolitan area."
+            "Los Angeles is known for its Mediterranean climate, ethnic and cultural diversity, Hollywood film industry, and sprawling metropolitan area.",
+            "The English pronunciation of the name of the city has varied over time.",
+            "Los Angeles is subject to earthquakes because of its location on the Pacific Ring of Fire. The geologic instability has produced numerous faults, which cause approximately 10,000 earthquakes annually in Southern California, though most of them are too small to be felt.",
+            "Los Angeles is often billed as the \"Creative Capital of the World\" because one in every six of its residents works in a creative industry and there are more artists, writers, filmmakers, actors, dancers and musicians living and working in Los Angeles than any other city at any other time in history."
         ]
     },
     {
         "city": "San José",
         "country": "USA",
         "timezone": "America/Costa_Rica",
-        "population": 1798103
+        "desc": "A major city in the U.S. state of California that is the cultural, financial, and political center of Silicon Valley and largest city in Northern California by both population and area.",
+        "population": {
+            "count": 1013240,
+            "year": 2020
+        },
+        "subdesc": [
+            "San José is notable for its innovation, cultural diversity, affluence, and sunny and mild Mediterranean climate.",
+            "Its connection to the booming high tech industry phenomenon known as Silicon Valley sparked Mayor Tom McEnery to adopt the city the motto of \"Capital of Silicon Valley\" in 1988.",
+            "Major global tech companies including Cisco Systems, eBay, Adobe Inc., PayPal, Broadcom, Samsung, Acer, and Zoom maintain their headquarters in San José.",
+            "San José is named after <i>el Pueblo de San José de Guadalupe</i> (Spanish for \"the Town of Saint Joseph on the Guadalupe\"), the city's predecessor, which was eventually located in the area of what is now the Plaza de César Chávez."
+        ]
     },
     {
         "city": "Mexico City",
