@@ -97,6 +97,13 @@ window.onload = () => {
         }
     })
 
+    //Function to move the arrow to the cordenates passed in the parameters
+    function moveArrow(x: number, y: number) {
+        let arrow_div = document.getElementById('arrow_img') as HTMLElement
+        arrow_div.style.left = x + "px"
+        arrow_div.style.top = y + "px"
+    }
+
 
 
 

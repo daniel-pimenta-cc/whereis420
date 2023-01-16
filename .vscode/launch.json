@@ -14,7 +14,7 @@
             "request": "launch",
             "module": "uvicorn",
             "args": [
-                "main:app"
+                "main:app", "--reload","--port","80","--host","127.0.0.1"
             ],
             "jinja": true,
             "justMyCode": true

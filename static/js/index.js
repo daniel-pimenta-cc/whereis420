@@ -44,7 +44,7 @@ window.onload = () => {
         arrow_div.classList.contains('mb-8') ? arrow_div.classList.remove('mb-8') : arrow_div.classList.add('mb-8');
         setTimeout(() => {
             arrowMove();
-        }, 500);
+        }, 800);
     }
     function initMapScreen(cheat = true) {
         document.getElementById('logo_div')?.classList.add('animate__fadeOut');
@@ -59,12 +59,6 @@ window.onload = () => {
             document.getElementById('intro_screen')?.classList.add('hidden');
             document.getElementById('map_screen')?.classList.remove('hidden');
             arrowMove();
-            let city = JSON.parse(document.getElementById('response_get')?.innerText);
-            let text_div = document.getElementById('text_city');
-            let desc_div = document.getElementById('text_desc');
-            let text_text = city.city + ", " + city.country;
-            text_div.innerText = text_text.toUpperCase();
-            desc_div.innerText = city.desc;
             document.getElementById('info_div')?.classList.remove('opacity-0');
         });
     }
@@ -78,10 +72,10 @@ window.onload = () => {
     document.getElementById("logo_div")?.classList.add('animate__animated', 'animate__fadeIn');
     setTimeout(() => {
         document.getElementById('logo-char1')?.classList.add('text-[#00773e]');
-    }, 1600);
+    }, 1400);
     setTimeout(() => {
         document.getElementById('logo-char2')?.classList.add('text-[#d6c20c]');
-    }, 1800);
+    }, 1600);
     setTimeout(() => {
         document.getElementById('logo-char3')?.classList.add('text-[#bc0824]');
         setTimeout(() => {
@@ -91,13 +85,13 @@ window.onload = () => {
             const logo_colon = setInterval(() => {
                 flashText(document.getElementById('logo-colon'));
             }, 500);
-        }, 1000);
+        }, 800);
         const color_change = setInterval(() => {
             formation = colorsChange(formation);
-        }, 1000);
+        }, 800);
         setTimeout(() => {
             document.getElementById('logo_text')?.classList.remove('opacity-0', '-mt-[16px]');
-        }, 3000);
+        }, 1500);
         setTimeout(() => {
             document.getElementById('logo_text')?.classList.remove('duration-1000');
             const logo_text_flash = setInterval(() => {
@@ -108,6 +102,11 @@ window.onload = () => {
                     initMapScreen();
                 }
             });
-        }, 4000);
-    }, 2000);
+        }, 3000);
+    }, 1700);
 };
+//function to discover the client timezone 
+function getTimezone() {
+    return Intl.DateTimeFormat().resolvedOptions().timeZone;
+}
+console.log(getTimezone());

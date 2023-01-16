@@ -1,0 +1,31 @@
+<html>
+<head>
+<style>
+#myImg {
+  cursor: crosshair;
+}
+</style>
+</head>
+<body>
+
+<img id="myImg" src="world-green.webp" width="100%"  onclick="getCoords(event)">
+
+<p>Click on the image to get the coordinates:</p>
+
+<p id="demo"></p>
+
+<script>
+function getCoords(event) {
+  var x = event.offsetX;
+  var y = event.offsetY;
+  var img = document.getElementById("myImg");
+  var img_width = img.offsetWidth;
+  var img_height = img.offsetHeight;
+  var x_percent = x / img_width * 100;
+  var y_percent = y / img_height * 100;
+  document.getElementById("demo").innerHTML = "X coords: " + x_percent + "%, Y coords: " + y_percent + "%";
+}
+</script>
+
+</body>
+</html>
