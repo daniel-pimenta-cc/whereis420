@@ -131,7 +131,7 @@ function updateCountdown(minutes_passed,  original_countdown_value) {
         document.getElementById('countdown_div')?.classList.add('hidden');
         document.getElementById('time_to_blaze')?.classList.remove('hidden');
     }//if it is greater than 16:30 then change the infos to next city and show the countdown
-    else if (hour_int == 16 && minutes_int > 30) {
+    else if (hour_int == 16 && minutes_int > 29) {
         nextCity();
         document.getElementById('countdown_div')?.classList.remove('hidden');
         document.getElementById('time_to_blaze')?.classList.add('hidden');
