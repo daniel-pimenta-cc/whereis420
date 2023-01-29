@@ -346,6 +346,17 @@ timezones_data = [
 
     },
     {
+        "city": "Suva",
+        "country": "Fiji",
+        "timezone": "Pacific/Fiji",
+        "population": 77366,
+        "map": "map_suva.png", #TODO
+        "desc": "Suva is the capital and largest city of Fiji. It is located on the southeast coast of the island of Viti Levu, and is the country's major port and commercial centre.",
+            "subdesc": [
+                "todo"
+            ]
+    },
+    {
         "city": "Auckland",
         "country": "New Zealand",
         "timezone": "Pacific/Auckland",
