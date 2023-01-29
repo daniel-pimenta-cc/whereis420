@@ -1,5 +1,10 @@
 "use strict";
 window.onload = () => {
+    //variable that saves the current time when the page is loaded
+    let initial_time = new Date();
+    //variable that saves how many minutes have passed since the page was loaded
+    let minutes_passed = 0;
+    const original_countdown_value = document.getElementById('countdown_to_420')?.innerHTML;
     function colorsChange(formation) {
         let return_number = 0;
         if (formation == 0) {
@@ -39,13 +44,6 @@ window.onload = () => {
             html_element?.classList.add('opacity-0');
         }
     }
-    function arrowMove() {
-        let arrow_div = document.getElementById('arrow_img');
-        arrow_div.classList.contains('mb-8') ? arrow_div.classList.remove('mb-8') : arrow_div.classList.add('mb-8');
-        setTimeout(() => {
-            arrowMove();
-        }, 800);
-    }
     function initMapScreen(cheat = true) {
         document.getElementById('logo_div')?.classList.add('animate__fadeOut');
         document.getElementById('wm_on')?.classList.add('opacity-0');
@@ -58,7 +56,7 @@ window.onload = () => {
             }
             document.getElementById('intro_screen')?.classList.add('hidden');
             document.getElementById('map_screen')?.classList.remove('hidden');
-            arrowMove();
+            //arrowMove();
             document.getElementById('info_div')?.classList.remove('opacity-0');
         });
     }
@@ -104,9 +102,135 @@ window.onload = () => {
             });
         }, 3000);
     }, 1700);
+    setInterval(() => {
+        minutes_passed = updateMinutesPassed(initial_time);
+        updateTime();
+        setTimeout(() => {}, 100);
+        updateCountdown(minutes_passed, original_countdown_value);
+        setTimeout(() => {}, 100);
+        console.log(minutes_passed);
+    }, 500);
 };
 //function to discover the client timezone 
 function getTimezone() {
     return Intl.DateTimeFormat().resolvedOptions().timeZone;
 }
 console.log(getTimezone());
+
+//funtion that reduce the couwntdown by 1 each minute and update the html
+function updateCountdown(minutes_passed,  original_countdown_value) {
+    original_countdown_value = parseInt(original_countdown_value);
+    minutes_passed = parseInt(minutes_passed);
+    let countdown = document.getElementById('countdown_to_420');
+    let minutes_element = document.getElementById('current_minute_thing');
+    let minutes_int = parseInt(minutes_element.innerHTML);
+    let hour_element = document.getElementById('current_hour_thing');
+    let hour_int = parseInt(hour_element.innerHTML);
+    //if it is btw 16:20 and 16:30 then show the time to blaze it
+    if (hour_int == 16 && minutes_int >= 20 && minutes_int <= 30) {
+        document.getElementById('countdown_div')?.classList.add('hidden');
+        document.getElementById('time_to_blaze')?.classList.remove('hidden');
+    }//if it is greater than 16:30 then change the infos to next city and show the countdown
+    else if (hour_int == 16 && minutes_int > 30) {
+        nextCity();
+        document.getElementById('countdown_div')?.classList.remove('hidden');
+        document.getElementById('time_to_blaze')?.classList.add('hidden');
+    }//else just subtract the minutes passed from the countdown
+    else {
+        let minutes = original_countdown_value;
+        minutes -= minutes_passed;
+        countdown.innerHTML = minutes;
+    }
+
+
+
+    
+}
+//function that update the html with the current time
+function updateTime() {
+    let timezone = document.getElementById('timezone_value').innerHTML;
+    let minutes_element = document.getElementById('current_minute_thing');
+    let minutes_int = parseInt(minutes_element.innerHTML);
+    let hour_element = document.getElementById('current_hour_thing');
+    let hour_int = parseInt(hour_element.innerHTML);
+    let time = new Date();
+    //convert the time to the specified timezone
+    time = new Date(time.toLocaleString("en-US", { timeZone: timezone }));
+    let minutes = time.getMinutes();
+    let hours = time.getHours();
+    if (minutes_int != minutes) {
+        if (minutes < 10) {
+            minutes_element.innerHTML = '0' + minutes;
+        }
+        else
+            minutes_element.innerHTML = minutes;
+    }
+    if (hour_int != hours) {
+        if (hours < 10) {
+            hour_element.innerHTML = '0' + hours;
+        }
+        else
+            hour_element.innerHTML = hours;
+    }
+
+
+    
+}
+//function that update the minutes minutes_passed variable by subtracting the current time and the initial_time
+function updateMinutesPassed(initial_time) {
+    let current_time = new Date();
+    let minutes_passed = (current_time - initial_time) / 60000;
+    return minutes_passed;
+}
+//function that change the information for the next city
+function nextCity() {
+    //get the next city data by makint a request to the /next_city_data endpoint and save to next_data
+    let next_data = {};
+    let request = new XMLHttpRequest();
+    request.open('GET', '/next_city_data', false);
+    request.send(null);
+    if (request.status === 200) {
+        next_data = JSON.parse(request.responseText);
+    }
+
+    let text_div = document.getElementById('text_city');
+    let desc_div = document.getElementById('text_desc');
+    let text_text = next_data.city + ", " + next_data.country;
+    let timezone_value = document.getElementById('timezone_value');
+    timezone_value.innerHTML = next_data.timezone;
+    text_div.innerText = text_text.toUpperCase();
+    desc_div.innerText = next_data.desc;
+    //replace the subdess by grabbing al the h3 on the info div deleting them and adding the new ones
+    let info_div = document.getElementById('info_div');
+    let h3s = info_div.getElementsByTagName('h3');
+    for (let i = h3s.length - 1; i >= 0; i--) {
+        h3s[i].remove();
+    }
+    let h3s_array = [];
+    for (let i = 0; i < next_data.sub_desc.length; i++) {
+        let h3 = document.createElement('h3');
+        h3.innerText = next_data.sub_desc[i];
+        //add the class to the h3
+        h3.classList.add('font-pix');
+        h3.classList.add('text-[16px]');
+        h3.classList.add('my-4');
+        h3.classList.add('leading-tight');
+        h3.classList.add('mx-2');
+        h3s_array.push(h3);
+    }
+    //add the new h3s after the h1 with the id text_desc
+    let h1 = document.getElementById('text_desc');
+    h3s_array.forEach(h3 => h1.after(h3));
+    //update the population
+    let population = document.getElementById('pop_count_value');
+    population.innerText = next_data.pop_count;
+    //change the map image
+    let map_img = document.getElementById('map_img');
+    map_img.src = '../static/images/'+ next_data.map_img;
+    //update time
+    updateTime();
+    //update countdown
+    let countdown = document.getElementById('countdown_to_420');
+    countdown.innerHTML = next_data.minutes_to_420;
+
+}

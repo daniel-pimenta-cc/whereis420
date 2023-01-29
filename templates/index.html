@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
-  <title>Where is 4:20</title>
+  <title>Where is 4:20?</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -76,7 +76,7 @@
 
 
   <!-- MAP SCREEN -->
-  <div id="map_screen" class="flex flex-col items-center justify-center w-screen h-screen relative hidden p-4">
+  <div id="map_screen" class="flex flex-col items-center justify-center w-full h-full xl:w-screen xl:h-screen relative hidden p-4">
       <!--CLOCK AREA-->
       <div id="clock_div" class="absolute top-9 left-8 flex flex-col items-center justify-center border-4 border-green-600 bg-[#000E] w-[52%] h-[13%]">
         <div id="clock" class="flex flex-row w-[100%] h-[100%]">
@@ -88,19 +88,47 @@
               <h2 id="title_text"  class="text-[#e6e6e6] leading-[0.75]">Where is 4:20 ?</h2>
             </div>
           </div>
-          <div id="clock_minute" class="h-50 w-[200px] flex items-center justify-center">
+          {%if is_420 %}
+          <div id="time_to_blaze" class="h-50 w-[200px] flex items-center justify-center">
+            <div class="my-auto items-center justify-center">
+              <h4 class="font-pix text-[12px] leading-tight mx-2">time to blaze it!</h4>
+              <div class="faa-tada animated">
+              <img src="../static/images/joint.png" class="w-[32px] ml-8">
+              </div>
+            </div>
+          </div>
+          <div id="countdown_div" class="h-50 w-[200px] hidden flex items-center justify-center">
             <div id="clock_minute_hand" class="my-auto items-center justify-center">
               <h4 class="font-pix text-[12px] leading-tight mx-2">time until 4:20</h4>
               <div class="wrap">
               <img src="../static/images/0.png" class="w-[32px] ml-8">
               </div>
-              <h3 id="clock_minute_text" class="font-pix text-[18px] leading-tight ml-9 mx-2">{{minutes_to_420}}<span class="font-pix text-[8px]"> min</span></h3>
+              <p class="font-pix text-[18px] leading-tight ml-9 mx-2"><span id="countdown_to_420">{{minutes_to_420}}</span><span class="font-pix text-[8px]"> min</span></p>
             </div>
           </div>
+          {%else%}
+          <div id="time_to_blaze" class="h-50 hidden w-[200px] flex items-center justify-center">
+            <div class="my-auto items-center justify-center">
+              <h4 class="font-pix text-[12px] leading-tight mx-2">time to blaze it!</h4>
+              <div class="faa-tada animated">
+              <img src="../static/images/joint.png" class="w-[32px] ml-8">
+              </div>
+            </div>
+          </div>
+          <div id="countdown_div" class="h-50 w-[200px] flex items-center justify-center">
+            <div id="clock_minute_hand" class="my-auto items-center justify-center">
+              <h4 class="font-pix text-[12px] leading-tight mx-2">time until 4:20</h4>
+              <div class="wrap">
+              <img src="../static/images/0.png" class="w-[32px] ml-8">
+              </div>
+              <p class="font-pix text-[18px] leading-tight ml-9 mx-2"><span id="countdown_to_420">{{minutes_to_420}}</span><span class="font-pix text-[8px]"> min</span></p>
+            </div>
+          </div>
+          {%endif%}
           <div id="clock_hour" class="h-50 flex items-center justify-center">
             <div id="clock_hour_hand" class="my-auto">
-              <h3 id="clock_hour_text1" class="font-pix text-[18px] leading-tight mx-2">Current time:<span class="font-pix text-[22px] leading-tight ml-2">{{current_hour}}:<span id="current_minute_thing">{{current_minute}}</span></span><span class="font-pix text-[12px]">pm</span></h3>
-              <h3 id="clock_hour_text2" class="font-pix text-[18px] leading-tight mx-2">Timezone:<span class="font-pix text-[14px] leading-tight ml-2">{{timezone}}</span></h3>
+              <h3 id="clock_hour_text1" class="font-pix text-[18px] leading-tight mx-2">Current time:<span id="current_hour_thing" class="font-pix text-[22px] leading-tight ml-2">{{current_hour}}</span>:<span id="current_minute_thing">{{current_minute}}</span><span class="font-pix text-[12px]">pm</span></h3>
+              <h3 id="timezone_element" class="font-pix text-[18px] leading-tight mx-2">Timezone:<span id="timezone_value" class="font-pix text-[14px] leading-tight ml-2">{{timezone}}</span></h3>
             </div>
           </div>
           
@@ -108,7 +136,7 @@
       </div>
       <div id="map_bg" class="flex border-4 border-green-600 w-full h-[85%] mb-4 p-4">
         <div id="map_area"class="flex justify-center items-center h-full w-[55%]">
-          <img id="arrow_img" src="../static/images/arrow.webp" class=""/>
+          <img id="arrow_img" src="../static/images/arrow.webp" class="mb-8 move-image"/>
           <img id="map_img" src="../static/images/{{map_img}}" class=""/>
         </div>
        
@@ -128,22 +156,26 @@
           {%endfor%}
           <h4 id="pop_count" class="font-pix my-4 leading-tight mx-2">
             <span class="font-pix text-bitcell_s1">Population:</span><br>
-            <span class="font-pix text-bitcell_s2">{{pop_count}}</span>
+            <span id="pop_count_value" class="font-pix text-bitcell_s2">{{pop_count}}</span>
           </h4>
         </div>
       </div>
       <div class="flex items-center justify-center border-4 border-green-600 w-full h-[15%] ">
-        <div class="flex flex-col items-center justify-center">
-          <div class="flex flex-row items-center justify-center">
-            <a href="https://github.com/daniel-pimenta-cc/whereis420" target="_blank" class="flex flex-row items-center justify-center">
-            <img src="../static/images/github_icon.png" class="w-[45px]"/> 
-            <h1 class="font-pix text-[18px] leading-tight mx-2">Check the project on GitHub</h1>
-            </a> 
-            <div class="w-[950px]"></div>
-            <a href="https://www.buymeacoffee.com/danielpimenta" target="_blank" class="flex flex-row items-center justify-center">
-            <h1 class="font-pix text-[18px] leading-tight mx-2">Buy me a joint!</h1>
-            <img src="../static/images/donate.png" class="w-[50px]"/>   
-            </a>        
+        <div class="flex flex-col w-[95%]">
+          <div class="flex flex-row">
+            <div class="grow-0">
+              <a href="https://github.com/daniel-pimenta-cc/whereis420" target="_blank" class="flex flex-row items-center justify-center">
+              <img src="../static/images/github_icon.png" class="w-[45px]"/> 
+              <h1 class="font-pix text-[18px] leading-tight mx-2">Check the project on GitHub</h1>
+              </a> 
+            </div>
+            <div class="grow"></div>
+            <div class="grow-0">
+              <a href="https://www.buymeacoffee.com/danielpimenta" target="_blank" class="flex flex-row items-center justify-center">
+              <h1 class="font-pix text-[18px] leading-tight mx-2">Buy me a joint!</h1>
+              <img src="../static/images/donate.png" class="w-[50px]"/>   
+              </a>        
+            </div>
           </div>
         </div>
       </div>
