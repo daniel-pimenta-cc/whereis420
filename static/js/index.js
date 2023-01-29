@@ -4,7 +4,7 @@ window.onload = () => {
     let initial_time = new Date();
     //variable that saves how many minutes have passed since the page was loaded
     let minutes_passed = 0;
-    const original_countdown_value = document.getElementById('countdown_to_420')?.innerHTML;
+    let original_countdown_value = document.getElementById('countdown_to_420')?.innerHTML;
     function colorsChange(formation) {
         let return_number = 0;
         if (formation == 0) {
@@ -231,6 +231,7 @@ function nextCity() {
     updateTime();
     //update countdown
     let countdown = document.getElementById('countdown_to_420');
+    original_countdown_value = next_data.minutes_to_420;
     countdown.innerHTML = next_data.minutes_to_420;
 
 }
