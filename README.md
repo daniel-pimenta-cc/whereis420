@@ -1,25 +1,7 @@
-
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-
 <a name="readme-top"></a>
-
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
 
 <!-- PROJECT SHIELDS -->
 
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![GitHub contributors](https://img.shields.io/github/contributors/daniel-pimenta-cc/whereis420.svg?style=for-the-badge)](https://github.com/daniel-pimenta-cc/whereis420)
 [![GitHub forks](https://img.shields.io/github/forks/daniel-pimenta-cc/whereis420.svg?style=for-the-badge)](https://github.com/daniel-pimenta-cc/whereis420/network/members)
 [![GitHub stars](https://img.shields.io/github/stars/daniel-pimenta-cc/whereis420.svg?style=for-the-badge)](https://github.com/daniel-pimenta-cc/whereis420/stargazers)
@@ -38,7 +20,7 @@
 <h3 align="center">Where is 4:20 ?</h3>
 
 <p align="center">
-    An awesome README template to jumpstart your projects!
+    A website to show where in the world it is 4:20 or the next place it will be 4:20.
     <br />
     <a href="https://github.com/daniel-pimenta-cc/whereis420"><strong>Explore the docs »</strong></a>
     <br />
@@ -69,12 +51,10 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -130,20 +110,18 @@ Before starting the project, make sure you have Python, uvicorn and FastAPI inst
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/daniel-pimenta-cc/whereis420.git
    ```
-3. Install NPM packages
+2. Enter the project folder 
    ```sh
-   npm install
+   cd whereis420
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+3. Run 
+   ```sh
+   uvicorn main:app 
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -152,15 +130,14 @@ _Below is an example of how you can instruct your audience on installing and set
 
 ## Roadmap
 
-- [X] Add Changelog
-- [X] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
+- [X] Finish first version
+- [ ] Launch
+- [ ] Finish the mobile version
 - [ ] Multi-language Support
   - [ ] Chinese
   - [ ] Spanish
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/daniel-pimenta-cc/whereis420/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -185,7 +162,7 @@ Don't forget to give the project a star! Thanks again!
 
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the GNU General Public License v3.0. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -199,20 +176,4 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGMENTS -->
-
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven&#39;s Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven&#39;s Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
