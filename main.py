@@ -47,7 +47,6 @@ async def root(request: Request):
         'current_minute': local_time.minute if local_time.minute >= 10 else f'0{local_time.minute}',
         'minutes_to_420': minutes_to_420,
         'is_420': is_420,
-        'content': json.dumps(timezones_data[i+1])
     })
         
 @app.get("/next_city_data")
