@@ -1,10 +1,10 @@
 "use strict";
+//variable that saves the current time when the page is loaded
+let initial_time = new Date();
+//variable that saves how many minutes have passed since the page was loaded
+let minutes_passed = 0;
+let original_countdown_value = document.getElementById('countdown_to_420')?.innerHTML;
 window.onload = () => {
-    //variable that saves the current time when the page is loaded
-    let initial_time = new Date();
-    //variable that saves how many minutes have passed since the page was loaded
-    let minutes_passed = 0;
-    let original_countdown_value = document.getElementById('countdown_to_420')?.innerHTML;
     function colorsChange(formation) {
         let return_number = 0;
         if (formation == 0) {
