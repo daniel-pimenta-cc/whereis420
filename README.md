@@ -21,12 +21,11 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 [![GitHub contributors](https://img.shields.io/github/contributors/daniel-pimenta-cc/whereis420.svg?style=for-the-badge)](https://github.com/daniel-pimenta-cc/whereis420)
-[Contributors][contributors-url]
-[Forks][forks-url]
-[Stargazers][stars-url]
-[Issues][issues-url]
-[MIT License][license-url]
-[LinkedIn][linkedin-url]
+[![GitHub forks](https://img.shields.io/github/forks/daniel-pimenta-cc/whereis420.svg?style=for-the-badge)](https://github.com/daniel-pimenta-cc/whereis420/network/members)
+[![GitHub stars](https://img.shields.io/github/stars/daniel-pimenta-cc/whereis420.svg?style=for-the-badge)](https://github.com/daniel-pimenta-cc/whereis420/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/daniel-pimenta-cc/whereis420.svg?style=for-the-badge)](https://github.com/daniel-pimenta-cc/whereis420/issues)
+[![GitHub license](https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge)](https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555)](https://www.linkedin.com/in/daniel-pimenta-cc/)
 
 <!-- PROJECT LOGO -->
 
@@ -95,13 +94,11 @@ Future Features
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [Python][Python-url]
-* [HTML5][HTML5-url]
-* [Javascript][Javascript-url]
-* [FastAPI][FastAPI-url]
-* [TailwindCSS][TailwindCSS-url]
+* [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+* [![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)](https://html.spec.whatwg.org/multipage/)
+* [![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* [![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=FastAPI&logoColor=white)](https://fastapi.tiangolo.com/)
+* [![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
 
 
@@ -148,16 +145,6 @@ _Below is an example of how you can instruct your audience on installing and set
    ```js
    const API_KEY = 'ENTER YOUR API';
    ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- USAGE EXAMPLES -->
-
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -229,31 +216,3 @@ Use this space to list resources you find helpful and would like to give credit 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- MARKDOWN LINKS & IMAGES -->
-
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-
-
-[contributors-shield]: https://img.shields.io/github/contributors/daniel-pimenta-cc/whereis420.svg?style=for-the-badge
-[contributors-url]: https://github.com/daniel-pimenta-cc/whereis420/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/daniel-pimenta-cc/whereis420.svg?style=for-the-badge
-[forks-url]: https://github.com/daniel-pimenta-cc/whereis420/network/members
-[stars-shield]: https://img.shields.io/github/stars/daniel-pimenta-cc/whereis420.svg?style=for-the-badge
-[stars-url]: https://github.com/daniel-pimenta-cc/whereis420/stargazers
-[issues-shield]: https://img.shields.io/github/issues/daniel-pimenta-cc/whereis420.svg?style=for-the-badge
-[issues-url]: https://github.com/daniel-pimenta-cc/whereis420/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/in/daniel-pimenta-cc/
-[product-screenshot]: Screenshot.png
-[FastAPI]: https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=FastAPI&logoColor=white
-[FastAPI-url]: https://fastapi.tiangolo.com/
-[TailwindCSS]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
-[TailwindCSS-url]: https://tailwindcss.com/
-[HTML5]: https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white
-[HTML5-url]: https://html.spec.whatwg.org/multipage/
-[JavaScript]: https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E
-[JavaScript-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
-[Python]: https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white
-[Python-url]: https://www.python.org/
