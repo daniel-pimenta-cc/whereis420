@@ -233,5 +233,9 @@ function nextCity() {
     let countdown = document.getElementById('countdown_to_420');
     original_countdown_value = next_data.minutes_to_420;
     countdown.innerHTML = next_data.minutes_to_420;
+    initial_time = new Date();
+    //hide the time to blaze it
+    document.getElementById('countdown_div')?.classList.remove('hidden');
+    document.getElementById('time_to_blaze')?.classList.add('hidden');
 
 }
