@@ -20,7 +20,7 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-
+[![GitHub contributors](https://img.shields.io/github/contributors/daniel-pimenta-cc/whereis420.svg?style=for-the-badge)](https://github.com/daniel-pimenta-cc/whereis420)
 [Contributors][contributors-url]
 [Forks][forks-url]
 [Stargazers][stars-url]
@@ -85,17 +85,11 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+4:20 World Clock is a website that shows the next location in the world that will be 4:20. It was inspired by a joke with friends who always checked the time in different parts of the world when they smoked and "paid tribute" to that place. The site displays the next 4:20 time, and displays a funny animation of a joint if the time is between 4:20 and 4:30. Otherwise, it displays a countdown to the next 4:20. Additionally, the site always displays interesting information about the location, such as the local time.
 
-Here's why:
-
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life 😄
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
+Future Features
+*Add a collaborative playlist of songs for each country
+*Add a visitor counter for each time zone
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -117,16 +111,24 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+*Python
+*FastAPI
+*uvicorn
 
-* npm
+Before starting the project, make sure you have Python, uvicorn and FastAPI installed on your machine. These are the only tools required to run 4:20 World Clock. To install FastAPI, use the following command in your terminal:
+
+* fastapi
   ```sh
-  npm install npm@latest -g
+  pip install fastapi
+  ```
+
+* uvicorn
+  ```sh
+  pip install uvicorn
   ```
 
 ### Installation

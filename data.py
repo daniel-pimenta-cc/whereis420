@@ -104,7 +104,7 @@ timezones_data = [
         "country": "Venezuela",
         "timezone": "America/Caracas",
         "desc": "The capital, the center of the Greater Caracas Area, and the largest city of Venezuela.",
-        "map": "map_caracas.png", # TODO
+        "map": "map_caracas.png", 
         "population": 2245744,
         "subdesc": [
             "Caracas is the political, administrative and cultural center of Venezuela.",
@@ -138,7 +138,7 @@ timezones_data = [
         "country": "Canada",
         "timezone": "America/St_Johns",
         "population": 111914,
-        "map": "map_st_johns.png", # TODO
+        "map": "map_st_johns.png",
         "desc": "The capital and largest city of the Canadian province of Newfoundland and Labrador. It is on the eastern tip of the Avalon Peninsula on the island of Newfoundland.",
          "subdesc": [
             "todo"
@@ -350,7 +350,7 @@ timezones_data = [
         "country": "Fiji",
         "timezone": "Pacific/Fiji",
         "population": 77366,
-        "map": "map_suva.png", #TODO
+        "map": "map_suva.png",
         "desc": "Suva is the capital and largest city of Fiji. It is located on the southeast coast of the island of Viti Levu, and is the country's major port and commercial centre.",
             "subdesc": [
                 "todo"
