@@ -6,7 +6,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/daniel-pimenta-cc/whereis420.svg?style=for-the-badge)](https://github.com/daniel-pimenta-cc/whereis420/network/members)
 [![GitHub stars](https://img.shields.io/github/stars/daniel-pimenta-cc/whereis420.svg?style=for-the-badge)](https://github.com/daniel-pimenta-cc/whereis420/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/daniel-pimenta-cc/whereis420.svg?style=for-the-badge)](https://github.com/daniel-pimenta-cc/whereis420/issues)
-[![GitHub license](https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge)](https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt)
+[![GitHub license](https://img.shields.io/github/license/daniel-pimenta-cc/whereis420.svg?style=for-the-badge)](https://github.com/daniel-pimenta-cc/whereis420/blob/main/LICENSE.txt)
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555)](https://www.linkedin.com/in/daniel-pimenta-cc/)
 
 <!-- PROJECT LOGO -->
@@ -66,7 +66,7 @@
 
 4:20 World Clock is a website that shows the next location in the world that will be 4:20. It was inspired by a joke with friends who always checked the time in different parts of the world when they smoked and "paid tribute" to that place. The site displays the next 4:20 time, and displays a funny animation of a joint if the time is between 4:20 and 4:30. Otherwise, it displays a countdown to the next 4:20. Additionally, the site always displays interesting information about the location, such as the local time.
 
-###Future Features
+### Future Features
 *Add a collaborative playlist of songs for each country
 *Add a visitor counter for each time zone
 
@@ -131,11 +131,9 @@ Before starting the project, make sure you have Python, uvicorn and FastAPI inst
 ## Roadmap
 
 - [X] Finish first version
-- [ ] Launch
+- [X] Launch
 - [ ] Finish the mobile version
-- [ ] Multi-language Support
-  - [ ] Chinese
-  - [ ] Spanish
+- [ ] Work on new features
 
 See the [open issues](https://github.com/daniel-pimenta-cc/whereis420/issues) for a full list of proposed features (and known issues).
 
@@ -170,10 +168,11 @@ Distributed under the GNU General Public License v3.0. See `LICENSE.txt` for mor
 
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Daniel Pimenta - [Linkedin](https://www.linkedin.com/in/daniel-pimenta-cc/) - danipimentasousa@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/daniel-pimenta-cc/whereis420](https://github.com/daniel-pimenta-cc/whereis420)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+[product-screenshot]: Screenshot.png
