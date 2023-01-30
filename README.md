@@ -66,7 +66,7 @@
 
 4:20 World Clock is a website that shows the next location in the world that will be 4:20. It was inspired by a joke with friends who always checked the time in different parts of the world when they smoked and "paid tribute" to that place. The site displays the next 4:20 time, and displays a funny animation of a joint if the time is between 4:20 and 4:30. Otherwise, it displays a countdown to the next 4:20. Additionally, the site always displays interesting information about the location, such as the local time.
 
-Future Features
+###Future Features
 *Add a collaborative playlist of songs for each country
 *Add a visitor counter for each time zone
 
