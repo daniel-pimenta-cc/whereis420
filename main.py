@@ -31,11 +31,17 @@ async def root(request: Request):
     if local_time >= datetime_420 and local_time <= datetime.strptime("16:30", "%H:%M").time():
         is_420 = True
 
+    text=''
+    if is_420:
+        text = f'It\'s 4:20 in {timezones_data[i]["city"]}, {timezones_data[i]["country"]}'
+    else:
+        text = f'It will be 4:20 in {timezones_data[i]["city"]}, {timezones_data[i]["country"]} in {minutes_to_420} minutes'
+
 
     return templates.TemplateResponse("index.html", 
     {
         "request": request,
-        'text': f'It will be 4:20 in {timezones_data[i]["city"]}, {timezones_data[i]["country"]} in {minutes_to_420} minutes',
+        'text': text,
         'map_img': timezones_data[i]['map'],
         'city': timezones_data[i]['city'],
         'country': timezones_data[i]['country'],
