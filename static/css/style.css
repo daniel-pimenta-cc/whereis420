@@ -33,14 +33,14 @@
   z-index: 2;
   width: 64px;
   height: 72px;
-  zoom: 75%;
+  zoom: 90%;
   position: absolute;
 }
 
 #weed_img {
   width: 35px;
   height: 31px;
-  zoom: 75%;
+  zoom: 100%;
 }
 
 #clock_div {
@@ -50,7 +50,7 @@
 #world_icon_img {
   width: 150px;
   height: 150px;
-  zoom: 65%;
+  zoom: 90%;
 }
 
 @-webkit-keyframes rotate-quarter-1 {
@@ -234,5 +234,22 @@
   }
   100% {
     transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  #world_icon_img {
+    width: 50px;
+    height: 50px;
+    zoom: 100%;
+  }
+  #arrow_img {
+    z-index: 2;
+    width: 32px;
+    height: 36px;
+    zoom: 100%;
+    position: absolute;
+  }
+  #weed_img {
+    zoom: 75%;
   }
 }/*# sourceMappingURL=style.css.map */

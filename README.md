@@ -13,11 +13,11 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/daniel-pimenta-cc/whereis420">
+  <a href="https://whereis420.app/">
     <img src="social_preview.png" alt="Logo" height="200">
   </a>
 
-<h3 align="center">Where is 4:20 ?</h3>
+<a href="https://whereis420.app/"><h3 align="center">Where is 4:20 ?</h3></a>
 
 <p align="center">
     A website to show where in the world it is 4:20 or the next place it will be 4:20.
@@ -25,7 +25,7 @@
     <a href="https://github.com/daniel-pimenta-cc/whereis420"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/daniel-pimenta-cc/whereis420">View Demo</a>
+    <a href="https://whereis420.app/">View Demo</a>
     ·
     <a href="https://github.com/daniel-pimenta-cc/whereis420/issues">Report Bug</a>
     ·
@@ -92,9 +92,10 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-*Python
-*FastAPI
-*uvicorn
+* Python
+* FastAPI
+* uvicorn
+* pytz
 
 Before starting the project, make sure you have Python, uvicorn and FastAPI installed on your machine. These are the only tools required to run 4:20 World Clock. To install FastAPI, use the following command in your terminal:
 
@@ -107,6 +108,12 @@ Before starting the project, make sure you have Python, uvicorn and FastAPI inst
   ```sh
   pip install uvicorn
   ```
+
+* pytz
+  ```sh
+  pip install pytz
+  ```
+
 
 ### Installation
 
@@ -132,7 +139,7 @@ Before starting the project, make sure you have Python, uvicorn and FastAPI inst
 
 - [X] Finish first version
 - [X] Launch
-- [ ] Finish the mobile version
+- [X] Finish the mobile prototype
 - [ ] Work on new features
 
 See the [open issues](https://github.com/daniel-pimenta-cc/whereis420/issues) for a full list of proposed features (and known issues).
@@ -147,6 +154,8 @@ Contributions are what make the open source community such an amazing place to l
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
+
+The cities data is contained in the data.py file
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)

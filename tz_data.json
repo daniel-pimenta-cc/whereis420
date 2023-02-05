@@ -74,14 +74,11 @@
         "city": "San Jos\u00e9",
         "country": "USA",
         "timezone": "America/Costa_Rica",
-        "desc": "A major city in the U.S. state of California that is the cultural, financial, and political center of Silicon Valley and largest city in Northern California by both population and area.",
+        "desc": "San Jos\u00e9 is Costa Rica's seat of national government, focal point of political and economic activity, and major transportation hub.",
         "map": "map_san_jose.png",
         "population": 1013240,
         "subdesc": [
-            "San Jos\u00e9 is notable for its innovation, cultural diversity, affluence, and sunny and mild Mediterranean climate.",
-            "Its connection to the booming high tech industry phenomenon known as Silicon Valley sparked Mayor Tom McEnery to adopt the city the motto of \"Capital of Silicon Valley\" in 1988.",
-            "Major global tech companies including Cisco Systems, eBay, Adobe Inc., PayPal, Broadcom, Samsung, Acer, and Zoom maintain their headquarters in San Jos\u00e9.",
-            "San Jos\u00e9 is named after <i>el Pueblo de San Jos\u00e9 de Guadalupe</i> (Spanish for \"the Town of Saint Joseph on the Guadalupe\"), the city's predecessor, which was eventually located in the area of what is now the Plaza de C\u00e9sar Ch\u00e1vez."
+            "Know something cool about that place ? Contribute on git and share with other stoners!"
         ]
     },
     {
@@ -92,7 +89,8 @@
         "map": "map_mexico_city.png",
         "population": 8918653,
         "subdesc": [
-            "Mexico City is one of the most important cultural and financial centers in the Americas. It is located in the Valley of Mexico, a large valley in the high plateaus in the center of Mexico, at an altitude of 2,240 meters (7,350 ft)."
+            "Mexico City is one of the most important cultural and financial centers in the Americas. It is located in the Valley of Mexico, a large valley in the high plateaus in the center of Mexico, at an altitude of 2,240 meters (7,350 ft).",
+            "Mexico City is the most visited city in the Americas."
         ]
     },
     {
@@ -126,7 +124,8 @@
         "map": "map_sao_paulo.png",
         "population": 22046000,
         "subdesc": [
-            "todo"
+            "S\u00e3o Paulo has one of the largest coffee plantations in the country. The biological institute in Vila Mariana has over 1,500 coffee plants.",
+            "This city has the only gymnasium exclusively used for sumo sports outside of Japan, located in Bom Retiro.The city of S\u00e3o Paulo is the largest tourist destination in the whole of Brazil, it receives at least 12.5 million tourists annually. "
         ]
     },
     {
@@ -137,7 +136,8 @@
         "map": "map_st_johns.png",
         "desc": "The capital and largest city of the Canadian province of Newfoundland and Labrador. It is on the eastern tip of the Avalon Peninsula on the island of Newfoundland.",
         "subdesc": [
-            "todo"
+            "The first permanent residence was established in 1528",
+            "St. John\u2019s is the oldest post-Columbian European settlement in North America.The city is named after John Cabot, the first explorer to sail into the island."
         ]
     },
     {
@@ -148,7 +148,7 @@
         "map": "map_fernando_noronha.png",
         "desc": "An archipelago in the Atlantic Ocean, part of the State of Pernambuco, Brazil, and located 354km (220mi) offshore from the Brazilian coast. It consists of 21 islands and islets.",
         "subdesc": [
-            "todo"
+            "To help preserve the island\u2019s natural landscapes and conserve the delicate ecosystem that thrives there, the number of tourists that can visit Fernando de Noronha is about 450 to 500 people per day.During the Beagle five-year expedition 1830s, Charles Darwin stopped at the Fernando de Noronha islands and his observations there inspired further research there from other biologists and ecologists."
         ]
     },
     {
@@ -159,7 +159,9 @@
         "map": "map_praia.png",
         "desc": "The capital and largest city of Cape Verde. It is located on Santiago Island, the largest island of the archipelago.",
         "subdesc": [
-            "todo"
+            "There are more Cape Verdeans living abroad than are in the country.",
+            "It is estimated that there is one goat for every two people in Cape Verde.",
+            "Cape Verde was uninhabited until the 15th century, when Portuguese explorers discovered and colonized the islands, establishing the first European settlement in the tropics."
         ]
     },
     {
@@ -170,7 +172,7 @@
         "map": "map_accra.png",
         "desc": "The capital and largest city of Ghana, with an estimated population of 2,291,352 as of 2012.",
         "subdesc": [
-            "todo"
+            "Accra Is the Second Most Expensive City in Africa.The population in Accra is one of the youngest in the world. 56% of the entire population is currently under 24 years old and the trend towards a young population shows no signs of stopping."
         ]
     },
     {
@@ -181,7 +183,7 @@
         "map": "map_london.png",
         "desc": "The capital and largest city of England and the United Kingdom.",
         "subdesc": [
-            "todo"
+            "London boasts over 170 museums, from the massive British Museum, London\u2019s most popular tourist attraction, to the tiny Fan Museum in Greenwich."
         ]
     },
     {
@@ -192,7 +194,7 @@
         "map": "map_cairo.png",
         "desc": "The capital and largest city of Egypt.",
         "subdesc": [
-            "todo"
+            "Know something cool about that place ? Contribute on git and share with other stoners!"
         ]
     },
     {
@@ -203,7 +205,7 @@
         "map": "map_moscow.png",
         "desc": "The capital and most populous city of Russia, with 13.2 million residents within the city limits, 17 million within the urban area, and 20 million within the metropolitan area.",
         "subdesc": [
-            "todo"
+            "Know something cool about that place ? Contribute on git and share with other stoners!"
         ]
     },
     {
@@ -214,7 +216,7 @@
         "map": "map_baku.png",
         "desc": "The capital and largest city of Azerbaijan, as well as the largest city on the Caspian Sea and of the Caucasus region.",
         "subdesc": [
-            "todo"
+            "Know something cool about that place ? Contribute on git and share with other stoners!"
         ]
     },
     {
@@ -225,7 +227,7 @@
         "map": "map_tehran.png",
         "desc": "The capital of Iran and Tehran Province. With a population of around 8.7 million in the city proper and 15 million in the wider metropolitan area, it is the largest city in Western Asia and the second-largest in the Middle East.",
         "subdesc": [
-            "todo"
+            "Know something cool about that place ? Contribute on git and share with other stoners!"
         ]
     },
     {
@@ -236,7 +238,7 @@
         "map": "map_karachi.png",
         "desc": "The capital of the Pakistani province of Sindh. It is the most populous city in Pakistan, and fifth-most-populous city proper in the world.",
         "subdesc": [
-            "todo"
+            "Know something cool about that place ? Contribute on git and share with other stoners!"
         ]
     },
     {
@@ -247,7 +249,7 @@
         "map": "map_mumbai.png",
         "desc": "The capital city of the Indian state of Maharashtra. It is the most populous city in India with an estimated city population of 18.4 million.",
         "subdesc": [
-            "todo"
+            "Know something cool about that place ? Contribute on git and share with other stoners!"
         ]
     },
     {
@@ -258,7 +260,7 @@
         "map": "map_kathmandu.png",
         "desc": "The capital and largest city of Nepal. It is the country's political, cultural, and economic center.",
         "subdesc": [
-            "todo"
+            "Know something cool about that place ? Contribute on git and share with other stoners!"
         ]
     },
     {
@@ -269,7 +271,7 @@
         "map": "map_dhaka.png",
         "desc": "The capital and largest city of Bangladesh. It is one of the world's most populated cities, with a population of 18 million people in the Greater Dhaka Area.",
         "subdesc": [
-            "todo"
+            "Know something cool about that place ? Contribute on git and share with other stoners!"
         ]
     },
     {
@@ -280,7 +282,7 @@
         "map": "map_yangon.png",
         "desc": "The capital of Myanmar, and its largest city. It is the country's commercial, industrial, and financial centre, and home to the majority of the country's corporate offices.",
         "subdesc": [
-            "todo"
+            "Know something cool about that place ? Contribute on git and share with other stoners!"
         ]
     },
     {
@@ -291,7 +293,7 @@
         "map": "map_jakarta.png",
         "desc": "The capital and largest city of Indonesia. Located on the northwest coast of the world's most populous island of Java, it is the centre of economy, culture and politics of Indonesia.",
         "subdesc": [
-            "todo"
+            "Know something cool about that place ? Contribute on git and share with other stoners!"
         ]
     },
     {
@@ -302,7 +304,7 @@
         "map": "map_shanghai.png",
         "desc": "The most populous city proper in the world, with a population of more than 24 million as of 2014. It is one of the four direct-controlled municipalities of the People's Republic of China, with the status of a national central city.",
         "subdesc": [
-            "todo"
+            "Know something cool about that place ? Contribute on git and share with other stoners!"
         ]
     },
     {
@@ -313,7 +315,7 @@
         "map": "map_tokyo.png",
         "desc": "Tokyo is the capital of Japan, the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.",
         "subdesc": [
-            "todo"
+            "Know something cool about that place ? Contribute on git and share with other stoners!"
         ]
     },
     {
@@ -324,7 +326,7 @@
         "map": "map_brisbane.png",
         "desc": "Brisbane is the capital of and most populous city in the Australian state of Queensland, and the third most populous city in Australia.",
         "subdesc": [
-            "todo"
+            "Know something cool about that place ? Contribute on git and share with other stoners!"
         ]
     },
     {
@@ -335,7 +337,7 @@
         "map": "map_port_vila.png",
         "desc": "Vanuatu is an island nation located in the South Pacific Ocean. It is made up of 83 islands, of which 65 are inhabited. The islands are located in the Melanesian subregion of Oceania, about 1,750 kilometres (1,090 mi) east of northern Australia and 500 kilometres (310 mi) northeast of New Caledonia.",
         "subdesc": [
-            "todo"
+            "Know something cool about that place ? Contribute on git and share with other stoners!"
         ]
     },
     {
@@ -346,7 +348,7 @@
         "map": "map_suva.png",
         "desc": "Suva is the capital and largest city of Fiji. It is located on the southeast coast of the island of Viti Levu, and is the country's major port and commercial centre.",
         "subdesc": [
-            "todo"
+            "Know something cool about that place ? Contribute on git and share with other stoners!"
         ]
     },
     {
@@ -357,7 +359,7 @@
         "map": "map_auckland.png",
         "desc": "Auckland is a city in the North Island of New Zealand. It is the most populous urban area in the country, with an urban population of 1,495, which constitutes 32 percent of New Zealand's population.",
         "subdesc": [
-            "todo"
+            "Know something cool about that place ? Contribute on git and share with other stoners!"
         ]
     }
 ]

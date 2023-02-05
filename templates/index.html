@@ -45,11 +45,11 @@
 </head>
 
 <body id="body_screen"
-  class="flex font-bitcell items-center justify-center bg-black m-0 w-screen h-screen text-green-600 subpixel-antialiased text-[36px] overflow-hidden">
+  class="flex font-bitcell bg-black m-0 w-screen h-screen text-green-600 subpixel-antialiased max:md:text-[12px] overflow-y-scroll md:overflow-hidden md:text-[36px] md:items-center md:justify-center">
 
 
   <!-- INTRO SCREEN -->
-  <div id="intro_screen" class="flex items-center justify-center w-screen h-screen duration-[1s] relative">
+  <div id="intro_screen" class="flex items-center justify-center w-screen h-screen md:text-[36px] duration-[1s] relative">
     <div>
       <div id="wm_on" class="w-screen h-screen bg-contain bg-center bg-no-repeat absolute duration-500 opacity-0"></div>
       <div id="wm_off" class="w-screen h-screen bg-contain bg-center bg-no-repeat"></div>
@@ -57,8 +57,8 @@
     <div id="logo_div"
       class="flex flex-col items-center justify-center text-center p-8 absolute bg-black/90 border-2 border-green-600 hidden">
       <div class="font-pix flex flex-col items-center justify-center -mb-6">
-        <p class="text-pix_s3 -mb-10">Where is</p>
-        <p class="font-modern-dos text-bitcell_s6 tracking-tight">
+        <p class="text-pix_s3 md:text-pix_s5 -mb-10">Where is</p>
+        <p class="font-modern-dos text-bitcell_s6 md:text-bitcell_s8 tracking-tight">
           <span id="logo-char1">4</span><span id="logo-colon" class="-tracking-widest -ml-3">:</span><span id="logo-char2">2</span><span id="logo-char3">0</span>
         </p>
       </div>
@@ -75,111 +75,121 @@
 
 
   <!-- MAP SCREEN -->
-  <div id="map_screen" class="flex flex-col items-center justify-center w-full h-full xl:w-screen xl:h-screen relative hidden p-4">
-      <!--CLOCK AREA-->
-      <div id="clock_div" class="absolute top-9 left-8 flex flex-col items-center justify-center border-4 border-green-600 bg-[#000E] w-[52%] h-[13%]">
-        <div id="clock" class="flex flex-row w-[100%] h-[100%]">
-          <div id="world_icon" class="flex items-center justify-center w-[15%] h-[100%]">
-            <img id="world_icon_img" src="../static/images/world-icon-green.png" class="w-[100%] h-[100%]">
-          </div>
-          <div id="title_div" class="flex items-center justify-center w-[25%] h-[100%]">
-            <div class="flex items-center justify-center w-[100%] h-[100%]">
-              <h2 id="title_text"  class="text-[#e6e6e6] leading-[0.75]">Where is 4:20 ?</h2>
-            </div>
-          </div>
-          {%if is_420 %}
-          <div id="time_to_blaze" class="h-50 w-[200px] flex items-center justify-center">
-            <div class="my-auto items-center justify-center">
-              <h4 class="font-pix text-[12px] leading-tight mx-2">time to blaze it!</h4>
-              <div class="faa-tada animated">
-              <img src="../static/images/joint.png" class="w-[32px] ml-8">
+  <div id="map_screen" class="flex flex-col items-center w-full h-full xl:w-screen xl:h-screen relative hidden p-4 md:justify-center md:relative ">
+      <div id="map_bg" class="flex flex-col border-4 border-green-600 w-full h-fit mb-4 p-4 md:flex-row md:h-[85%]">
+        <!--CLOCK AREA-->
+        <div id="clock_div" class="flex flex-col items-center justify-center border-4 border-green-600 bg-[#000E] h-[220] md:w-[52%] md:h-[13%] md:absolute md:top-9 md:left-9">
+          <div id="clock" class="flex flex-row w-[100%] h-[100%]">
+            <div class="flex-col w-1/3 my-auto items-center justify-cente md:w-2/5 md:flex md:flex-row">
+              <div id="world_icon" class="flex items-center justify-center">
+                <img id="world_icon_img" src="../static/images/world-icon-green.png" class="w-[40px] h-[40px]">
+              </div>
+              <div id="title_div" class="flex items-center justify-center">
+                <div class="flex items-center justify-center w-[100%] h-[100%]">
+                  <h2 id="title_text" class="text-[#e6e6e6] md:text-[48px] leading-[0.75]">Where is 4:20 ?</h2>
+                </div>
               </div>
             </div>
-          </div>
-          <div id="countdown_div" class="h-50 w-[200px] hidden flex items-center justify-center">
-            <div id="clock_minute_hand" class="my-auto items-center justify-center">
-              <h4 class="font-pix text-[12px] leading-tight mx-2">time until 4:20</h4>
-              <div class="wrap">
-              <img src="../static/images/0.png" class="w-[32px] ml-8">
-              </div>
-              <p class="font-pix text-[18px] leading-tight ml-9 mx-2"><span id="countdown_to_420">{{minutes_to_420}}</span><span class="font-pix text-[8px]"> min</span></p>
-            </div>
-          </div>
-          {%else%}
-          <div id="time_to_blaze" class="h-50 hidden w-[200px] flex items-center justify-center">
-            <div class="my-auto items-center justify-center">
-              <h4 class="font-pix text-[12px] leading-tight mx-2">time to blaze it!</h4>
-              <div class="faa-tada animated">
-              <img src="../static/images/joint.png" class="w-[32px] ml-8">
+            {%if is_420 %}
+            <div id="time_to_blaze" class="h-50 w-[200px] flex items-center justify-center">
+              <div class="my-auto items-center justify-center">
+                <h4 class="font-pix text-[12px] md:text-[20px] leading-tight mx-2">time to blaze it!</h4>
+                <div class="faa-tada animated">
+                <img src="../static/images/joint.png" class="w-[32px]  md:w-[50px] ml-8 md:ml-14">
+                </div>
               </div>
             </div>
-          </div>
-          <div id="countdown_div" class="h-50 w-[200px] flex items-center justify-center">
-            <div id="clock_minute_hand" class="my-auto items-center justify-center">
-              <h4 class="font-pix text-[12px] leading-tight mx-2">time until 4:20</h4>
-              <div class="wrap">
-              <img src="../static/images/0.png" class="w-[32px] ml-8">
+            <div id="countdown_div" class="h-50 w-[200px] hidden flex items-center justify-center">
+              <div id="clock_minute_hand" class="my-auto items-center justify-center">
+                <h4 class="font-pix text-[12px] md:text-[18px] leading-tight mx-2">time until 4:20</h4>
+                <div class="wrap">
+                  <img src="../static/images/0.png" class="w-[32px] ml-8 md:ml-12">
+                </div>
+                <p class="font-pix text-[12px] md:text-[18px] leading-tight ml-9 md:ml-14 mx-2"><span id="countdown_to_420">{{minutes_to_420}}</span><span class="font-pix md:text-[12px] text-[8px]"> min</span></p>
               </div>
-              <p class="font-pix text-[18px] leading-tight ml-9 mx-2"><span id="countdown_to_420">{{minutes_to_420}}</span><span class="font-pix text-[8px]"> min</span></p>
             </div>
-          </div>
-          {%endif%}
-          <div id="clock_hour" class="h-50 flex items-center justify-center">
-            <div id="clock_hour_hand" class="my-auto">
-              <h3 id="clock_hour_text1" class="font-pix text-[18px] leading-tight mx-2">Current time:<span id="current_hour_thing" class="font-pix text-[22px] leading-tight ml-2">{{current_hour}}</span>:<span id="current_minute_thing">{{current_minute}}</span><span class="font-pix text-[12px]">pm</span></h3>
-              <h3 id="timezone_element" class="font-pix text-[18px] leading-tight mx-2">Timezone:<span id="timezone_value" class="font-pix text-[14px] leading-tight ml-2">{{timezone}}</span></h3>
+            {%else%}
+            <div id="time_to_blaze" class="h-50 hidden w-[200px] flex items-center justify-center">
+              <div class="my-auto items-center justify-center">
+                <h4 class="font-pix text-[12px] md:text-[20px] leading-tight mx-2">time to blaze it!</h4>
+                <div class="faa-tada animated">
+                <img src="../static/images/joint.png" class="w-[32px] md:w-[50px] ml-8 md:ml-14">
+                </div>
+              </div>
             </div>
+            <div id="countdown_div" class="h-50 w-[200px] flex items-center justify-center">
+              <div id="clock_minute_hand" class="my-auto items-center justify-center">
+                <h4 class="font-pix text-[12px] md:text-[18px] leading-tight mx-2">time until 4:20</h4>
+                <div class="wrap">
+                <img src="../static/images/0.png" class="w-[32px] md:w-[50px] ml-8 md:ml-[2.7rem]">
+                </div>
+                <p class="font-pix text-[12px] md:text-[18px] leading-tight ml-9 md:ml-14 mx-2"><span id="countdown_to_420">{{minutes_to_420}}</span><span class="font-pix md:text-[12px] text-[8px]"> min</span></p>
+              </div>
+            </div>
+            {%endif%}
+            <div class="h-50 w-1/3 flex items-center justify-center">
+              <div class="my-auto text-center">
+                <div class="flex flex-col md:flex md:flex-row">
+                  <div><h3 id="clock_hour_text1" class="font-pix text-[8px] md:mt-3 md:text-[30px] leading-tight mx-2">Current time:</h3></div>
+                  <div>
+                    <span id="current_hour_thing" class="font-pix text-[12px] md:text-[30px] leading-tight ml-2">{{current_hour}}</span>
+                    :<span class="font-pix text-[12px] md:text-[30px] leading-tight ml-2" id="current_minute_thing">{{current_minute}}</span>
+                    <span class="font-pix text-[6px] md:text-[24px]">pm</span>
+                  </div>
+                </div>
+                <div class="flex-col text-center md:flex md:flex-row">
+                  <h3 id="timezone_element" class="font-pix text-[8px] md:text-[30px] leading-tight mx-2">Timezone:</h3>
+                  <span id="timezone_value" class="font-pix text-[8px] md:text-[24px] md:mt-1 leading-tight ml-2">{{timezone}}</span>
+                </div>
+              </div>
+            </div>
+            
           </div>
-          
         </div>
-      </div>
-      <div id="map_bg" class="flex border-4 border-green-600 w-full h-[85%] mb-4 p-4">
-        <div id="map_area"class="flex justify-center items-center h-full w-[55%]">
+        <div id="map_area"class="flex justify-center items-center h-full w-full md:w-[55%]">
           <img id="arrow_img" src="../static/images/arrow.webp" class="mb-8 move-image"/>
           <img id="map_img" src="../static/images/{{map_img}}" class=""/>
         </div>
        
-        <div id="info_div"class="border-4 border-green-600 h-full w-[45%] bg-[#000E] p-2 duration-1000 opacity-0">
-          <div class="flex border-b-2 items-center border-green-600 pb-2 mb-4">
+        <div id="info_div"class="border-4 border-green-600 h-full bg-[#000E] p-2 duration-1000 opacity-0 md:w-[45%]">
+          <div class="flex border-b-2 items-center border-green-600 pb-2 mb-4 ">
             <img id="weed_img" src="../static/images/weed.webp" class="mr-4 ml-2"/>
-            <h1 id="text_city" class="text-[#e6e6e6] leading-[0.75]">{{city}}, {{country}}</h1>
+            <h1 id="text_city" class="text-[32px] md:text-[56px] text-[#e6e6e6] leading-[0.75]">{{city}}, {{country}}</h1>
           </div>
-          <h1 id="text_desc" class="font-pix text-[22px] leading-tight mx-2">
+          <h1 id="text_desc" class="font-pix text-[16px] leading-tight mx-2 md:text-[32px]">
             {{desc}}
           </h1>
           <!--for montando a lista de sub_desc-->
           {%for items in sub_desc%}
-            <h3 class="font-pix text-[16px] my-4 leading-tight mx-2">
+            <h3 class="font-pix text-[12px] my-4 leading-tight mx-2 md:text-[24px]">
               {{items}}
             </h3>
           {%endfor%}
           <h4 id="pop_count" class="font-pix my-4 leading-tight mx-2">
-            <span class="font-pix text-bitcell_s1">Population:</span><br>
-            <span id="pop_count_value" class="font-pix text-bitcell_s2">{{pop_count}}</span>
+            <span class="font-pix text-bitcell_s1 md:text-[30px]">Population:</span><br>
+            <span id="pop_count_value" class="font-pix text-bitcell_s1 md:text-bitcell_s3">{{pop_count}}</span>
           </h4>
         </div>
       </div>
-      <div class="flex items-center justify-center border-4 border-green-600 w-full h-[15%] ">
+      <div class="flex items-center justify-center border-4 border-green-600 w-full p-2 md:h-[15%]">
         <div class="flex flex-col w-[95%]">
           <div class="flex flex-row">
-            <div class="grow-0">
+            <div class="grow-0 pt-1">
               <a href="https://github.com/daniel-pimenta-cc/whereis420" target="_blank" class="flex flex-row items-center justify-center">
-              <img src="../static/images/github_icon.png" class="w-[45px]"/> 
-              <h1 class="font-pix text-[18px] leading-tight mx-2">Check the project on GitHub</h1>
+              <img src="../static/images/github_icon.png" class="w-[45px] md:w-[80px]"/> 
+              <h1 class="font-pix text-[12px] md:text-[24px] leading-tight mx-2">Check the project on GitHub</h1>
               </a> 
             </div>
             <div class="grow"></div>
-            <div class="grow-0">
+            <div class="grow-0 pb-1">
               <a href="https://www.buymeacoffee.com/danielpimenta" target="_blank" class="flex flex-row items-center justify-center">
-              <h1 class="font-pix text-[18px] leading-tight mx-2">Buy me a joint!</h1>
-              <img src="../static/images/donate.png" class="w-[50px]"/>   
+              <h1 class="font-pix text-[12px] leading-tight md:text-[24px] mx-2">Buy me a joint!</h1>
+              <img src="../static/images/donate.png" class="w-[50px] md:w-[80px]"/>   
               </a>        
             </div>
           </div>
         </div>
       </div>
-      
-      
   </div>
   <script src="static/js/index.js"></script>
   <style>

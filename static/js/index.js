@@ -5,6 +5,11 @@ let initial_time = new Date();
 let minutes_passed = 0;
 let original_countdown_value = document.getElementById('countdown_to_420')?.innerHTML;
 window.onload = () => {
+    //send to countapi.xyz to count the page views
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://api.countapi.xyz/hit/420blazeit/visits");
+    xhr.send();
+
     function colorsChange(formation) {
         let return_number = 0;
         if (formation == 0) {
@@ -108,8 +113,11 @@ window.onload = () => {
         setTimeout(() => {}, 100);
         updateCountdown(minutes_passed, original_countdown_value);
         setTimeout(() => {}, 100);
-        console.log(minutes_passed);
     }, 500);
+    //skips the intro screen after 6 seconds by setting initMapScreen to true
+    setTimeout(() => {
+        initMapScreen(true);
+    }, 6000);
 };
 //function to discover the client timezone 
 function getTimezone() {
