@@ -220,10 +220,12 @@ function nextCity() {
         h3.innerText = next_data.sub_desc[i];
         //add the class to the h3
         h3.classList.add('font-pix');
-        h3.classList.add('text-[16px]');
+        h3.classList.add('text-[12px]');
         h3.classList.add('my-4');
         h3.classList.add('leading-tight');
         h3.classList.add('mx-2');
+        h3.classList.add('md:text-[18px]');
+
         h3s_array.push(h3);
     }
     //add the new h3s after the h1 with the id text_desc
