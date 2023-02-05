@@ -50,7 +50,7 @@
 #world_icon_img {
   width: 150px;
   height: 150px;
-  zoom: 75%;
+  zoom: 60%;
 }
 
 @-webkit-keyframes rotate-quarter-1 {
